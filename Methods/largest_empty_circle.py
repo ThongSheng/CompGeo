@@ -1,1 +1,3 @@
+from classes.Point import *
+
 

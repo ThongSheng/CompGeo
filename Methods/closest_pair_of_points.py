@@ -3,7 +3,7 @@
 # given set of points.
 import math
 import copy
-import classes.Point as Point
+from classes.Point import *
 
 
 # A utility function to find the
@@ -103,11 +103,3 @@ def closest(P, n):
     # to find the smallest distance
     return closestUtil(P, Q, n)
 
-
-# Driver code
-P = [Point(2, 3), Point(12, 30),
-     Point(40, 50), Point(5, 1),
-     Point(12, 10), Point(3, 4)]
-n = len(P)
-print("The smallest distance is",
-      closest(P, n))
