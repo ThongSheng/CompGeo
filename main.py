@@ -11,11 +11,12 @@ testing  = [Point(2, 3), Point(12, 3),
      Point(11, 11), Point(9, 12),
      Point(12, 15), Point(0, -1)]
 
-
 close = closest(testing, len(testing))
 hull = convex_hull(testing)
 
-print("closest pair of points in test data: ", close)
+print("closest pair of points in test data: ")
+for point_ in close:
+     print(point_.x, point_.y)
 print("member of convex hull in test data: ")
 for point_ in hull:
      print(point_.x, point_.y)
