@@ -5,8 +5,8 @@ from Methods.line_segment_intersection import *
 from classes.Point import *
 import math
 
-testing  = [Point(2, 3), Point(12, 3),
-     Point(40, 50), Point(5, 1),
+testing  = [Point(5, 0), Point(5, 10),
+     Point(2, 0), Point(2, 10),
      Point(12, 10), Point(3, 5),
      Point(11, 11), Point(9, 12),
      Point(12, 15), Point(0, -1)]
@@ -20,4 +20,5 @@ for point_ in close:
 print("member of convex hull in test data: ")
 for point_ in hull:
      print(point_.x, point_.y)
-
+print("line segment intersection for first 4 points in test data: ")
+print(ifIntersect(testing[0], testing[1], testing[2], testing[3]))
