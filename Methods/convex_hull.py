@@ -21,16 +21,17 @@ def lr(line, point):
 
 
 def convex_hull(points):
-    points.sort(key=sorter)
+    pointsCopy = points.copy()
+    pointsCopy.sort(key=sorter)
     hull = []
     point_to_add = points[0]
     endpoint = Point(0, 0)
 
-    while endpoint != points[0]:
+    while endpoint != pointsCopy[0]:
         hull.append(point_to_add)
-        endpoint = points[0]
+        endpoint = pointsCopy[0]
         temp_line = Line_Segment(hull[-1], endpoint)
-        for a_point in points:
+        for a_point in pointsCopy:
             if lr(temp_line, a_point) == 1 or point_to_add == endpoint:
                 endpoint = a_point
                 temp_line = Line_Segment(hull[-1], endpoint)
