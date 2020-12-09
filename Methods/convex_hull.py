@@ -21,6 +21,9 @@ def lr(line, point):
 
 
 def convex_hull(points):
+    if(len(points) < 2):
+        print("insufficient points")
+        return 0
     pointsCopy = points.copy()
     pointsCopy.sort(key=sorter)
     hull = []

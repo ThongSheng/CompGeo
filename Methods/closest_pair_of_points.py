@@ -12,6 +12,9 @@ def dist(p, q):
 # Arguments: an array of points P[], and length of array n.
 def closest(P, n):
     min_dist = float('inf')
+    if(n < 2):
+        print("insufficient points")
+        return 0
 
     for i in range(n):
         for j in range(i+1, n):
