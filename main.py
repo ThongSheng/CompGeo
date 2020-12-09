@@ -13,6 +13,7 @@ testing = [Point(0, 5), Point(5, 5),
 
 close = closest(testing, len(testing))
 hull = convex_hull(testing)
+lc = largest_circle(testing)
 
 print("closest pair of points in test data: ")
 for point_ in close:
@@ -24,3 +25,7 @@ for point_ in hull:
 
 print("line segment intersection for first 4 points in test data: ")
 print(ifIntersect(testing[0], testing[1], testing[2], testing[3]))
+
+print("largest empty circle in testing data: ")
+for point_ in lc:
+     print(point_.x, point_.y)
